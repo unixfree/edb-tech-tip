@@ -5,7 +5,7 @@
 | Cluster Type | Components |
 |---|---|
 | **Lakehouse Cluster (Read-Only)** | EPAS + pgfs + pgaa |
-| **PGD Cluster (Read-Write)** | EPAS + pgfs + pgaa + pgd (bdr) |
+| **PGD Cluster (Read-Write)** | PGD + pgfs + pgaa |
 
 ## Node Configuration
 
