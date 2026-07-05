@@ -1,13 +1,17 @@
 ### 0. PostgreSQL (EDB EPAS)
 
-psql 
+psql -p 5444 -U enterprisedb
+```psql
 CREATE USER openwebui WITH PASSWORD 'change_me_strong_password';
 CREATE DATABASE openwebui OWNER openwebui;
 GRANT ALL PRIVILEGES ON DATABASE openwebui TO openwebui;
+```
 
-psql -d openwebui -p 5444
+psql -d openwebui -p 5444 -U enterprisedb
+```
 create extension vector;
-
+ALTER DATABASE openwebui SET datestyle TO 'ISO, MDY';
+```
 ### 1. uv 설치
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
