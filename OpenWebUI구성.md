@@ -66,11 +66,11 @@ Environment="VECTOR_DB=pgvector"
 Environment="DATABASE_URL=postgresql://openwebui:change_me_strong_password@localhost:5432/openwebui"
 Environment="WEBUI_SECRET_KEY=dd27cd9747e3526233ca607f70ae470a2b3e5fddc9e4e7d87e9d33552b2b7343"
 Environment="OLLAMA_BASE_URL=http://localhost:11434"
-Environment="PATH=/home/openwebui/.local/bin:/usr/bin:/bin"
+Environment="PATH=/home/ec2-user/.local/bin:/usr/bin:/bin"
 Environment="HOST=0.0.0.0"
 Environment="PORT=8080"
 
-ExecStart=/home/openwebui/.local/bin/uvx --python 3.11 --from "open-webui[postgres]" open-webui serve
+ExecStart=/home/ec2-user/.local/bin/uvx --python 3.11 --from "open-webui[postgres]" open-webui serve
 Restart=always
 RestartSec=5
 
